@@ -1,0 +1,6 @@
+{
+  "name": "CrimeNet AI",
+  "description": "Next-generation cognitive crime intelligence, real-time threat triage, predictive spatio-temporal modeling, and syndicate nexus network visualization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

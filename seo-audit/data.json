@@ -1,0 +1,27 @@
+{
+  "score": 87,
+  "issues": [
+    {
+      "type": "warning",
+      "message": "Meta description too short (80 chars). Aim for 150-160 characters."
+    },
+    {
+      "type": "warning",
+      "message": "65 image(s) missing alt text"
+    }
+  ],
+  "passed": [
+    "Title tag is properly configured",
+    "Single H1 heading present",
+    "Canonical URL is set",
+    "Open Graph meta tags present",
+    "Viewport meta tag present",
+    "Language attribute set"
+  ],
+  "meta": {
+    "title": "CRIMENET— AI Automation Agency Framer Website Template",
+    "description": "A premium Framer website template built for AI automation in criminal networking",
+    "canonical": "https://crrimenet.framer.website/",
+    "ogImage": "https://framerusercontent.com/images/oq7Lq2urMcBPXFvWHCorUq0i5CM.png"
+  }
+}

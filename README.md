@@ -1,11 +1,22 @@
-<div align="center">
+# Exported Site: crrimenet.framer.website
+Exported on 2026-09-19 by NoCodeExport
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+## How to View Your Site
+This export uses **hotlink mode** — assets reference the original site's CDN and require an internet connection to load correctly.
 
-  <h1>Built with AI Studio</h2>
+### Run a local server (recommended)
+```bash
+npm start
+```
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Features Integrated
+- CrimeNet Investigation Backend API (Cases CRUD, Evidence Management, Crime Network Graph)
+- Real-time CIRA (Crime Investigation & Reasoning Assistant) Dialogue Engine
+- Interactive Link Analysis & Crime Matrix Triage
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Deployment
+Deploy to any Node.js or Cloud Run environment:
+- `npm start` (Runs the integrated server on port 3000)
 
-</div>
+## Export Stats
+- Pages: 1
