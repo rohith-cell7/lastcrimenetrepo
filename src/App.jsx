@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { CIRAProvider } from './context/CIRAContext.jsx';
+import LandingPage from './components/LandingPage.jsx';
 import LoginPage from './components/LoginPage.jsx';
 import InvestigationWorkstation from './components/InvestigationWorkstation.jsx';
 import { api } from './services/api.js';
 
 export default function App() {
-  const [stage, setStage] = useState('login');
+  const [stage, setStage] = useState('landing');
   const [currentUser, setCurrentUser] = useState(null);
+
+  const handleEnterPlatform = () => {
+    setStage('login');
+  };
 
   const handleLoginSuccess = (user) => {
     setCurrentUser(user);
@@ -16,7 +21,7 @@ export default function App() {
   const handleLogout = () => {
     api.setToken(null);
     setCurrentUser(null);
-    setStage('login');
+    setStage('landing');
   };
 
   if (stage === 'workstation') {
@@ -27,5 +32,9 @@ export default function App() {
     );
   }
 
-  return <LoginPage onLoginSuccess={handleLoginSuccess} />;
+  if (stage === 'login') {
+    return <LoginPage onLoginSuccess={handleLoginSuccess} onBack={() => setStage('landing')} />;
+  }
+
+  return <LandingPage onEnterPlatform={handleEnterPlatform} />;
 }

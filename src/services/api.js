@@ -3,7 +3,7 @@
  * Connects to the FastAPI backend at http://localhost:8000 with seamless offline/standalone fallback.
  */
 
-const BASE_URL = 'http://localhost:8000/api';
+const BASE_URL = '/api';
 
 let authToken = localStorage.getItem('crimenet_token') || null;
 
