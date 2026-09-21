@@ -408,12 +408,14 @@ app.post('/api/contact', (req, res) => {
   res.json({ success: true, message: 'Consultation request filed with Taskforce Dispatch.' });
 });
 
-// Serve static frontend
-app.use(express.static(__dirname));
+// Serve static frontend (Vite build output in dist/, or root in dev)
+const distPath = path.join(__dirname, 'dist');
+const staticPath = fs.existsSync(distPath) ? distPath : __dirname;
+app.use(express.static(staticPath));
 
 // Single-page fallback for Express v5
 app.get('*all', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(staticPath, 'index.html'));
 });
 
 app.listen(PORT, '0.0.0.0', () => {
